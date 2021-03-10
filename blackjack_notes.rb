@@ -128,6 +128,12 @@
     # prints the new fully shuffled deck that was created
 # p new_deck
 
+computer.get_card new_deck.deck
+human.get_card new_deck.deck
+
+p human
+p computer
+
 #Gameplay
     #Player chooses their name
         #creates a new player class
