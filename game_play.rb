@@ -1,6 +1,6 @@
-require 'card.rb'
+# require 'card.rb'
 require 'deck.rb'
-require 'players.rd'
+# require 'players.rd'
 
 human = Player.new
 computer = Player.new
