@@ -164,39 +164,44 @@ def gameplay human, computer
     p "computer hand is: #{computer_hand}"
     p "computers total hand value is: #{computer_card_total}"
     if card_total > computer_card_total
-        human.bankroll += 10 & computer.bankroll -= 10
+        human.bankroll += 10 
+        computer.bankroll -= 10
         p "player wins! human bankroll is #{human.bankroll}, computer loses! computer bankroll is #{computer.bankroll}"
     end
     if computer_card_total > card_total
-        computer.bankroll += 10 & human.bankroll -= 10
+        computer.bankroll += 10 
+        human.bankroll -= 10
         p "player loses! human bankroll is #{human.bankroll}, computer wins! computer bankroll is #{computer.bankroll}"
     end
     if card_total == computer_card_total
         p "it was a tie! human bankroll is still #{human.bankroll} and computer bankroll is still #{computer.bankroll}"
     end
 end
+
+def play_again? human, computer
+    puts "Do you want to play again (Y/N)?"
+    another_hand = gets.chomp.capitalize
+    if another_hand == "Y"
+        gameplay human, computer
+    else 
+        puts "Okay, game over. Your final bankroll is #{human.bankroll}"
+        get_name
+    end
+end
+
 # The over all game loop that calls on all other functions
-
-
 def game_start playername 
     human = Player.new 
     human.name = playername
     human.bankroll = 100
     computer = Player.new
     computer.bankroll = 1000
-    
-   
-
     p human
     p computer
-    gameplay human, computer 
-  
-    # while Player.bankroll >= 10 do
-    # @get_card
-
-
-
-    # end
+    gameplay human, computer
+    while human.bankroll >= 10 || computer.bankroll >= 10 do
+       play_again? human, computer
+    end
 end
 
 # function to get players name & asks them if they want to play via console. The response to "do you want to play" can be tied to the game loop maybe? If we still want to go that way. 
@@ -214,5 +219,4 @@ def get_name
 end
 
 get_name 
-
 
