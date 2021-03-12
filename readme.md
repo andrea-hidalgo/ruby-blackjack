@@ -1,6 +1,23 @@
-<h2>Git Commands and Reminders for Ruby- BlackJack</h2>
+# TEAM GOAT RUBY BLACKJACK #
 
-Our Main Repo for Ruby- BlackJack is https://github.com/andrea-hidalgo/ruby-blackjack.git
+Team Members:
+* Parker Doyle
+* Marsallis Faircloth
+* Joseph Hatzilazaridis
+* Andrea Hidalgo
+* Allegra Hilburger
+* Kevin Mathews
+* Kellie Matteson
+* Ryan Reiterman
+
+<hr>
+
+Main repo: https://github.com/andrea-hidalgo/ruby-blackjack.git
+
+<hr>
+
+<h2>Git Commands and Reminders for Ruby Blackjack</h2>
+
 FIRST THING YOU MUST DO:
 !!!Go to your personal dev repo- GIT PULL UPSTREAM DEV to make sure you have the most up to date info!!!
 Commands to Set up Your own repo: 
